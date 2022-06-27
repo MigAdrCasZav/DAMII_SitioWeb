@@ -1,0 +1,29 @@
+﻿<!DOCTYPE html>
+<html>
+    <head>
+        <meta name="viewport" content="width=device-width" />
+        <title>@ViewBag.Title = "_LayoutPrincipal";</title> @Styles.Render("~/Content/css")
+    </head>
+    <body>
+        <header>
+            <nav class="menu">
+                <ul>
+                    <li>@Html.ActionLink("Principal", "Index", "Receta")</li>
+                    <li>
+                        EMPLEADO
+                        <ul>
+                            <li>@Html.ActionLink("LISTADO DE RECETAS", "listadoRecetas", "Receta")</li>
+                            <li>@Html.ActionLink("REGISTRO NUEVA RECETA", "nuevaReceta", "Receta")</li>
+                        </ul>
+                    </li>
+                </ul>
+            </nav>
+        </header>
+        <figure>
+            <img id="banner" src="~/Imagenes/banner.jpg" />
+        </figure> <h2>APLICACION - MIS RECETAS</h2> @RenderBody()
+        <footer>
+            <h6>&copy; @DateTime.Now.Year - Todos los derechos reservados</h6>
+        </footer>
+    </body>
+</html>
